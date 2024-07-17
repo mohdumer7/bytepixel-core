@@ -12,7 +12,6 @@ import Loader from "./components/Loader/Loader";
 import socketIO from "socket.io-client";
 const ENDPOINT = process.env.NEXT_PUBLIC_SOCKET_SERVER_URI || "";
 const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
-import Template from "./template";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -34,15 +33,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
-        className={`${poppins.variable} ${josefin.variable} bg-[#795998] bg-no-repeat  duration-300`}
+        className={`${poppins.variable} ${josefin.variable} bg-black bg-no-repeat  duration-300`}
       >
         <Providers>
           <SessionProvider>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <Custom>
-                <Template>
-                  <div>{children}</div>
-                </Template>
+                <div>{children}</div>
               </Custom>
               <Toaster position="top-center" reverseOrder={false} />
             </ThemeProvider>

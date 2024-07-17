@@ -1,23 +1,17 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
+import NextPageTransition from "@gimwa/next-page-transition"
 
-const pageTransition = {
-    initial: { opacity: 0, scale: 0.8, x: 200 },
-    animate: { opacity: 1, scale: 1, x: 0 },
-    exit: { opacity: 0, scale: 0.8, x: -200 },
-    transition: { duration: 0.5, ease: "easeInOut" }
-};
-
-export default function Template({ children }: { children: React.ReactNode }) {
+const RootTemplate = ({ children }: { children: React.ReactNode }) => {
     return (
-        <motion.div
-            initial={pageTransition.initial}
-            animate={pageTransition.animate}
-            exit={pageTransition.exit}
-            transition={pageTransition.transition}
+        <NextPageTransition
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
         >
-            {children}
-        </motion.div>
-    );
+            { children }
+        </NextPageTransition>
+    )
 }
+
+export default RootTemplate
