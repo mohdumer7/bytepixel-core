@@ -1,0 +1,131 @@
+/* Custom styles for react-big-calendar in dark theme */
+.rbc-calendar {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #c9d1d9;
+}
+
+.rbc-toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding: 10px;
+    color: #c9d1d9;
+}
+
+.rbc-toolbar button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.rbc-toolbar button:disabled {
+    background: #555;
+    cursor: not-allowed;
+}
+.rbc-allday-cell{
+    height: 0px !important;
+    opacity: 0;
+    visibility: hidden !important;
+}
+.rbc-toolbar button:not(:disabled):hover {
+    background: #0056b3;
+}
+.rbc-timeslot-group{
+    padding: 10px;
+}
+.rbc-time-slot {
+    border-top: none; /* Remove border from empty slots */
+}
+.rbc-month-view,
+.rbc-time-view {
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+.rbc-day-slot .rbc-time-slot {
+    border-top: none;
+    height: fit-content;
+}
+
+.rbc-header {
+    background: #2d2d2d;
+    border-bottom: 1px solid #444;
+    padding: 8px;
+    font-weight: bold;
+    text-align: center;
+    color: #c9d1d9;
+}
+
+.rbc-day-bg {
+    background: #2d2d2d;
+}
+
+.rbc-today {
+    background: #3a3f44;
+}
+
+.rbc-event {
+    background-color: #007bff;
+    border-radius: 4px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.rbc-event:hover {
+    background-color: #0056b3;
+}
+
+.rbc-off-range-bg {
+    background: #444;
+    color: #777;
+}
+
+.rbc-time-content {
+    border-top: 2px solid #444;
+}
+
+.rbc-time-header {
+    background: #2d2d2d;
+}
+
+.rbc-time-header-cell {
+    text-align: center;
+    padding: 8px;
+    color: #c9d1d9;
+}
+
+.rbc-time-slot {
+    border-top: 1px solid #444;
+}
+
+.rbc-agenda-view table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #444;
+}
+
+.rbc-agenda-view th,
+.rbc-agenda-view td {
+    padding: 8px;
+    border: 1px solid #444;
+    color: #c9d1d9;
+    background: #2d2d2d;
+}
+
+.rbc-agenda-view th {
+    background: #1e1e1e;
+}
+
+.PhoneInputInput{
+    padding: 5px;
+    margin-top: 2px;
+}

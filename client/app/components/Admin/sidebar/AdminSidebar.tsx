@@ -229,7 +229,15 @@ const AdminSidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-
+            <Item
+                title="Create Meeting"
+                to="/admin/create-meeting"
+                icon={
+                  <OndemandVideoIcon className="text-black dark:text-white" />
+                }
+                selected={selected}
+                setSelected={setSelected}
+            />
             <Typography
               variant="h5"
               className="!text-[18px] text-black dark:text-[#ffffffc1] capitalize !font-[400]"

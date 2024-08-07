@@ -53,7 +53,7 @@ const CourseDetailsPage = ({ id }: Props) => {
           <Heading
             title={data.course.name + " - BytePixel"}
             description={
-              "BytePixel is a programming community which is developed by shahriar sajeeb for helping programmers"
+              "BytePixel is a programming community which is developed by Bytepixel for helping programmers"
             }
             keywords={data?.course?.tags}
           />

@@ -6,6 +6,7 @@ import Hero from "./components/Route/Hero";
 import {Courses} from "./components/Route/Courses";
 import Reviews from "./components/Route/Reviews";
 import FAQ from "./components/FAQ/FAQ";
+import BookDemo from "./components/BookDemo/BookDemo";
 import Footer from "./components/Footer";
 import WhySection from "@/app/components/Route/WhySection";
 import {OurWork} from "@/app/components/Route/OurWork";
@@ -37,6 +38,7 @@ const Page: FC<Props> = (props) => {
         <OurWork />
       <Reviews />
       <FAQ />
+        <BookDemo/>
       <Footer />
     </div>
   );
