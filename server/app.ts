@@ -10,8 +10,8 @@ import orderRouter from "./routes/order.route";
 import notificationRouter from "./routes/notification.route";
 import analyticsRouter from "./routes/analytics.route";
 import layoutRouter from "./routes/layout.route";
+import bookDemoRouter from "./routes/bookDemo.route";
 import { rateLimit } from 'express-rate-limit'
-
 // body parser
 app.use(express.json({ limit: "50mb" }));
 
@@ -36,6 +36,7 @@ const limiter = rateLimit({
 // routes
 app.use(
     "/api/v1",
+    bookDemoRouter,
     userRouter,
     orderRouter,
     courseRouter,
@@ -51,6 +52,7 @@ app.get("/test", (req: Request, res: Response, next: NextFunction) => {
         message: "API is working",
     });
 });
+
 
 // unknown route
 app.all("*", (req: Request, res: Response, next: NextFunction) => {
