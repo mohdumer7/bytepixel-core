@@ -7,11 +7,11 @@ gsap.registerPlugin(ScrollTrigger);
 type Props = {};
 
 const WhySection = (props: Props) => {
-  const textRef = useRef(null);
+  const textRef:React.MutableRefObject<any> = useRef(null);
   const text = "Why you should construct your kids career with us?";
 
   useEffect(() => {
-    const words = textRef.current.querySelectorAll(".word");
+    const words = textRef?.current.querySelectorAll(".word");
 
     gsap.set(words, { opacity: 0,y:10 });
     const trigger = ScrollTrigger.create({
