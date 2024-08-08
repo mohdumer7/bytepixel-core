@@ -64,7 +64,7 @@ export default function CreateMeeting() {
         }
     };
 
-    const handleTimeslotClicked = (startTimeEventEmit) => {
+    const handleTimeslotClicked = (startTimeEventEmit:any) => {
         const startTime = new Date(startTimeEventEmit.startTime);
         setMeetingStartTime(startTime);
         setMeetingEndTime(new Date(startTime.getTime() + 30 * 60000)); // Assuming a 30-minute duration
@@ -106,8 +106,8 @@ export default function CreateMeeting() {
             <Label htmlFor="text mt-2">Attendies</Label>
             <TagInput
                 tags={emailTags}
-                setTags={(newTags) => {
-                    const validTags = newTags.filter(tag => isEmailValid(tag.text));
+                setTags={(newTags:any) => {
+                    const validTags = newTags?.filter((tag:any) => isEmailValid(tag.text));
                     setEmailTags(validTags);
                 }}
                 placeholder="Add an email and press Enter"
