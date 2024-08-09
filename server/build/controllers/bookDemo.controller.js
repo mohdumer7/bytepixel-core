@@ -19,11 +19,18 @@ exports.bookDemo = (0, catchAsyncErrors_1.CatchAsyncError)(async (req, res, next
         });
         const data = { name, startDateTime, endDateTime, email };
         const html = await ejs_1.default.renderFile(path_1.default.join(__dirname, "../mails/demoClass.ejs"), data);
+        const techMail = await ejs_1.default.renderFile(path_1.default.join(__dirname, "../mails/demoClassTech.ejs"), data);
         try {
             await (0, sendMail_1.default)({
-                email: "umermohammed95@gmail.com",
+                email,
                 subject: "Your demo session",
                 template: "demoClass.ejs",
+                data,
+            });
+            await (0, sendMail_1.default)({
+                email: "picopixeltech24@gmail.com",
+                subject: "Demo session",
+                template: "demoClassTech.ejs",
                 data,
             });
             res.status(201).json({

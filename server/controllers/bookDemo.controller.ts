@@ -24,6 +24,11 @@ export const bookDemo = CatchAsyncError(
         data
       );
 
+      const techMail = await ejs.renderFile(
+          path.join(__dirname, "../mails/demoClassTech.ejs"),
+          data
+      );
+
       try {
         await sendMail({
           email,
@@ -32,12 +37,12 @@ export const bookDemo = CatchAsyncError(
           data,
         });
 
-        // await sendMail({
-        //   email:picopixeltech24@gmail.com,
-        //   subject: "Demo session",
-        //   template: "demoClass.ejs",
-        //   data,
-        // });
+        await sendMail({
+          email:"picopixeltech24@gmail.com",
+          subject: "Demo session",
+          template: "demoClassTech.ejs",
+          data,
+        });
 
         res.status(201).json({
           success: true,
