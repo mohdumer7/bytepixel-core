@@ -18,7 +18,7 @@ export const bookDemo = CatchAsyncError(
         name, startDateTime, endDateTime, email,phoneNumber
       });
 
-      const data = {name, startDateTime, endDateTime, email }
+      const data = {name, startDateTime, endDateTime, email,phoneNumber }
       const html = await ejs.renderFile(
         path.join(__dirname, "../mails/demoClass.ejs"),
         data

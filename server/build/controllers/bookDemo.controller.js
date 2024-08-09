@@ -17,7 +17,7 @@ exports.bookDemo = (0, catchAsyncErrors_1.CatchAsyncError)(async (req, res, next
         const demo = await demoSession_model_1.default.create({
             name, startDateTime, endDateTime, email, phoneNumber
         });
-        const data = { name, startDateTime, endDateTime, email };
+        const data = { name, startDateTime, endDateTime, email, phoneNumber };
         const html = await ejs_1.default.renderFile(path_1.default.join(__dirname, "../mails/demoClass.ejs"), data);
         const techMail = await ejs_1.default.renderFile(path_1.default.join(__dirname, "../mails/demoClassTech.ejs"), data);
         try {
